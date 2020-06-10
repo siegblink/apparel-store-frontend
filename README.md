@@ -1,3 +1,3 @@
-# Advanced-React
+# apparel-store-frontend
 
-frontend
+This is the front-end piece of the apparel store.
