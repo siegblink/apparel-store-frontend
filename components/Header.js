@@ -1,6 +1,18 @@
 import Nav from './Nav'
 import Link from 'next/link'
 import styled from 'styled-components'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+
+Router.onRouteChangeStart = function () {
+  NProgress.start()
+}
+Router.onRouteChangeComplete = function () {
+  NProgress.done()
+}
+Router.onRouteChangeError = function () {
+  NProgress.done()
+}
 
 const Logo = styled.h1`
   font-size: 4rem;
@@ -59,7 +71,7 @@ export default function Header() {
       <div className='sub-bar'>
         <p>Search</p>
       </div>
-      
+
       <div>Cart</div>
     </StyledHeader>
   )
